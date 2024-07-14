@@ -144,3 +144,30 @@ form.create-note button {
     bottom: -10px;
   }
 }
+
+@media (max-width: 320px) {
+  body {
+    padding: 0 4px;
+  }
+  header {
+    padding: 8px 16px;
+  }
+  .note {
+    width: 80%;
+    padding: 8px;
+  }
+  .note h1 {
+    font-size: 1em;
+  }
+  .note p {
+    font-size: 1em;
+  }
+  form.create-note {
+    width: 80%;
+    padding: 8px;
+  }
+  form.create-note button {
+    right: 8px;
+    bottom: -8px;
+  }
+}
