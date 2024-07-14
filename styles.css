@@ -7,8 +7,9 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
   padding: 0 16px;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
 header {
@@ -67,7 +68,7 @@ footer p {
   outline: none;
 }
 
-form {
+form.create-note {
   position: relative;
   width: 480px;
   margin: 30px auto 20px auto;
@@ -76,8 +77,8 @@ form {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-form input,
-form textarea {
+form.create-note input,
+form.create-note textarea {
   width: 100%;
   border: none;
   padding: 4px;
@@ -86,7 +87,7 @@ form textarea {
   font-family: inherit;
   resize: none;
 }
-form button {
+form.create-note button {
   position: absolute;
   right: 18px;
   bottom: -18px;
@@ -99,4 +100,47 @@ form button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+@media (max-width: 1024px) {
+  .note {
+    width: 200px;
+    margin: 12px;
+  }
+  form.create-note {
+    width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 8px;
+  }
+  header {
+    margin: auto -8px;
+    padding: 12px 24px;
+  }
+  .note {
+    width: 45%;
+  }
+  form.create-note {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 20px;
+  }
+  .note {
+    width: 100%;
+    margin: 10px 0;
+  }
+  form.create-note {
+    padding: 10px;
+  }
+  form.create-note button {
+    right: 10px;
+    bottom: -10px;
+  }
 }
